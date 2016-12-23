@@ -1,0 +1,5 @@
+package org.ntua.tant.rest.filters;
+
+public class SecurityFilter {
+
+}

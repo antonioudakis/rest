@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/messenger/src/main/java/org/ntua/tant/restclient/restclient.java"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="1"/>
+</listAttribute>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="org.ntua.tant.restclient.restclient"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="-m get -URL http://147.102.213.13:8888/rest/webapi/messages -u user -p password"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="messenger"/>
+</launchConfiguration>
