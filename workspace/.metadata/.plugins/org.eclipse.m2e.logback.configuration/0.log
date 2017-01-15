@@ -1946,3 +1946,203 @@ org.eclipse.core.runtime.CoreException: Launch configuration SendMessage referen
 2016-12-23 12:41:00,041 [Worker-26] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of rest
 2016-12-23 12:41:00,041 [Worker-26] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for rest
 2016-12-23 12:41:00,047 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-23 17:39:29,311 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-23 17:39:29,338 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-12-23 17:39:29,343 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-23 17:39:29,343 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\thodoris\Documents\GitHub\rest\workspace\rest\src\test\resources
+2017-01-15 08:59:21,402 [Worker-31] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Cleaning filtered folder for rest
+2017-01-15 08:59:26,984 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-15 08:59:27,028 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-01-15 08:59:27,031 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-15 08:59:27,031 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\thodoris\Documents\GitHub\rest\workspace\rest\src\test\resources
+2017-01-15 08:59:27,032 [Worker-28] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of rest
+2017-01-15 08:59:27,033 [Worker-28] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for rest
+2017-01-15 08:59:27,175 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-15 09:01:17,009 [Worker-35] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Cleaning filtered folder for rest
+2017-01-15 09:01:17,220 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-15 09:01:17,221 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-01-15 09:01:17,223 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-15 09:01:17,223 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\thodoris\Documents\GitHub\rest\workspace\rest\src\test\resources
+2017-01-15 09:01:17,224 [Worker-34] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of rest
+2017-01-15 09:01:17,224 [Worker-34] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for rest
+2017-01-15 09:01:17,234 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-15 09:07:37,547 [Worker-38] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Cleaning filtered folder for rest
+2017-01-15 09:07:37,736 [Worker-37] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-15 09:07:37,738 [Worker-37] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-01-15 09:07:37,740 [Worker-37] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-15 09:07:37,740 [Worker-37] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\thodoris\Documents\GitHub\rest\workspace\rest\src\test\resources
+2017-01-15 09:07:37,741 [Worker-37] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of rest
+2017-01-15 09:07:37,741 [Worker-37] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for rest
+2017-01-15 09:07:37,750 [Worker-37] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-15 09:10:09,605 [Worker-42] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Cleaning filtered folder for rest
+2017-01-15 09:10:09,807 [Worker-41] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-15 09:10:09,808 [Worker-41] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-01-15 09:10:09,810 [Worker-41] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-15 09:10:09,810 [Worker-41] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\thodoris\Documents\GitHub\rest\workspace\rest\src\test\resources
+2017-01-15 09:10:09,811 [Worker-41] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of rest
+2017-01-15 09:10:09,811 [Worker-41] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for rest
+2017-01-15 09:10:09,822 [Worker-41] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-15 09:16:20,365 [Worker-38] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Cleaning filtered folder for rest
+2017-01-15 09:16:20,584 [Worker-46] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-15 09:16:20,585 [Worker-46] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-01-15 09:16:20,588 [Worker-46] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-15 09:16:20,588 [Worker-46] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\thodoris\Documents\GitHub\rest\workspace\rest\src\test\resources
+2017-01-15 09:16:20,589 [Worker-46] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of rest
+2017-01-15 09:16:20,589 [Worker-46] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for rest
+2017-01-15 09:16:20,596 [Worker-46] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-15 09:38:12,379 [Worker-46] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Cleaning filtered folder for rest
+2017-01-15 09:38:12,816 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-15 09:38:12,818 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-01-15 09:38:12,820 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-15 09:38:12,821 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\thodoris\Documents\GitHub\rest\workspace\rest\src\test\resources
+2017-01-15 09:38:12,821 [Worker-53] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of rest
+2017-01-15 09:38:12,821 [Worker-53] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for rest
+2017-01-15 09:38:12,830 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-15 13:18:14,184 [Worker-152] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Cleaning filtered folder for rest
+2017-01-15 13:18:18,167 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-15 13:18:18,176 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-01-15 13:18:18,181 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-15 13:18:18,181 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\thodoris\Documents\GitHub\rest\workspace\rest\src\test\resources
+2017-01-15 13:18:18,183 [Worker-155] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of rest
+2017-01-15 13:18:18,184 [Worker-155] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for rest
+2017-01-15 13:18:18,414 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-15 13:56:17,870 [Worker-162] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Cleaning filtered folder for rest
+2017-01-15 13:56:18,460 [Worker-157] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-15 13:56:18,461 [Worker-157] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-01-15 13:56:18,462 [Worker-157] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-15 13:56:18,463 [Worker-157] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\thodoris\Documents\GitHub\rest\workspace\rest\src\test\resources
+2017-01-15 13:56:18,463 [Worker-157] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of rest
+2017-01-15 13:56:18,464 [Worker-157] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for rest
+2017-01-15 13:56:18,474 [Worker-157] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-15 14:07:46,312 [Worker-169] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Cleaning filtered folder for rest
+2017-01-15 14:07:46,565 [Worker-162] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-15 14:07:46,566 [Worker-162] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-01-15 14:07:46,568 [Worker-162] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-15 14:07:46,569 [Worker-162] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\thodoris\Documents\GitHub\rest\workspace\rest\src\test\resources
+2017-01-15 14:07:46,569 [Worker-162] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of rest
+2017-01-15 14:07:46,570 [Worker-162] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for rest
+2017-01-15 14:07:46,578 [Worker-162] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-15 14:08:50,153 [Worker-162] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Cleaning filtered folder for rest
+2017-01-15 14:08:50,380 [Worker-169] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-15 14:08:50,381 [Worker-169] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-01-15 14:08:50,383 [Worker-169] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-15 14:08:50,384 [Worker-169] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\thodoris\Documents\GitHub\rest\workspace\rest\src\test\resources
+2017-01-15 14:08:50,384 [Worker-169] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of rest
+2017-01-15 14:08:50,385 [Worker-169] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for rest
+2017-01-15 14:08:50,395 [Worker-169] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-15 14:12:22,119 [Worker-171] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Cleaning filtered folder for rest
+2017-01-15 14:12:22,333 [Worker-170] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-15 14:12:22,334 [Worker-170] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-01-15 14:12:22,336 [Worker-170] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-15 14:12:22,336 [Worker-170] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\thodoris\Documents\GitHub\rest\workspace\rest\src\test\resources
+2017-01-15 14:12:22,336 [Worker-170] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of rest
+2017-01-15 14:12:22,336 [Worker-170] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for rest
+2017-01-15 14:12:22,343 [Worker-170] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-15 14:13:14,815 [Worker-172] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Cleaning filtered folder for rest
+2017-01-15 14:13:15,054 [Worker-166] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-15 14:13:15,055 [Worker-166] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-01-15 14:13:15,057 [Worker-166] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-15 14:13:15,057 [Worker-166] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\thodoris\Documents\GitHub\rest\workspace\rest\src\test\resources
+2017-01-15 14:13:15,057 [Worker-166] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of rest
+2017-01-15 14:13:15,057 [Worker-166] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for rest
+2017-01-15 14:13:15,062 [Worker-166] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-15 14:14:36,505 [Worker-173] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Cleaning filtered folder for rest
+2017-01-15 14:14:36,682 [Worker-169] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-15 14:14:36,683 [Worker-169] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-01-15 14:14:36,687 [Worker-169] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-15 14:14:36,687 [Worker-169] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\thodoris\Documents\GitHub\rest\workspace\rest\src\test\resources
+2017-01-15 14:14:36,688 [Worker-169] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of rest
+2017-01-15 14:14:36,688 [Worker-169] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for rest
+2017-01-15 14:14:36,694 [Worker-169] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-15 14:16:33,629 [Worker-166] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Cleaning filtered folder for rest
+2017-01-15 14:16:33,853 [Worker-174] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-15 14:16:33,853 [Worker-174] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-01-15 14:16:33,871 [Worker-174] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-15 14:16:33,872 [Worker-174] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\thodoris\Documents\GitHub\rest\workspace\rest\src\test\resources
+2017-01-15 14:16:33,872 [Worker-174] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of rest
+2017-01-15 14:16:33,872 [Worker-174] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for rest
+2017-01-15 14:16:33,883 [Worker-174] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-15 22:38:48,422 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-15 22:38:48,462 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-01-15 22:38:48,465 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-15 22:38:48,466 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\thodoris\Documents\GitHub\rest\workspace\rest\src\test\resources
+2017-01-15 22:58:19,157 [Worker-23] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Cleaning filtered folder for rest
+2017-01-15 22:58:19,673 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-15 22:58:19,674 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-01-15 22:58:19,681 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-15 22:58:19,681 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\thodoris\Documents\GitHub\rest\workspace\rest\src\test\resources
+2017-01-15 22:58:19,682 [Worker-26] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of rest
+2017-01-15 22:58:19,685 [Worker-26] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for rest
+2017-01-15 22:58:19,902 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-15 23:04:20,137 [Worker-29] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Cleaning filtered folder for rest
+2017-01-15 23:04:20,407 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-15 23:04:20,409 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-01-15 23:04:20,410 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-15 23:04:20,411 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\thodoris\Documents\GitHub\rest\workspace\rest\src\test\resources
+2017-01-15 23:04:20,412 [Worker-30] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of rest
+2017-01-15 23:04:20,412 [Worker-30] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for rest
+2017-01-15 23:04:20,440 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-15 23:14:24,318 [Worker-35] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Cleaning filtered folder for rest
+2017-01-15 23:14:24,620 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-15 23:14:24,621 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-01-15 23:14:24,623 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-15 23:14:24,624 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\thodoris\Documents\GitHub\rest\workspace\rest\src\test\resources
+2017-01-15 23:14:24,624 [Worker-28] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of rest
+2017-01-15 23:14:24,624 [Worker-28] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for rest
+2017-01-15 23:14:24,652 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-15 23:14:52,568 [Worker-34] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Cleaning filtered folder for rest
+2017-01-15 23:14:52,815 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-15 23:14:52,816 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-01-15 23:14:52,818 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-15 23:14:52,819 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\thodoris\Documents\GitHub\rest\workspace\rest\src\test\resources
+2017-01-15 23:14:52,819 [Worker-30] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of rest
+2017-01-15 23:14:52,820 [Worker-30] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for rest
+2017-01-15 23:14:52,826 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-15 23:16:10,598 [Worker-36] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Cleaning filtered folder for rest
+2017-01-15 23:16:10,814 [Worker-37] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-15 23:16:10,814 [Worker-37] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-01-15 23:16:10,830 [Worker-37] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-15 23:16:10,830 [Worker-37] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\thodoris\Documents\GitHub\rest\workspace\rest\src\test\resources
+2017-01-15 23:16:10,830 [Worker-37] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of rest
+2017-01-15 23:16:10,830 [Worker-37] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for rest
+2017-01-15 23:16:10,830 [Worker-37] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-15 23:17:07,626 [Worker-37] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Cleaning filtered folder for rest
+2017-01-15 23:17:07,850 [Worker-36] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-15 23:17:07,851 [Worker-36] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-01-15 23:17:07,852 [Worker-36] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-15 23:17:07,853 [Worker-36] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\thodoris\Documents\GitHub\rest\workspace\rest\src\test\resources
+2017-01-15 23:17:07,853 [Worker-36] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of rest
+2017-01-15 23:17:07,853 [Worker-36] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for rest
+2017-01-15 23:17:07,857 [Worker-36] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-15 23:28:52,952 [Worker-40] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Cleaning filtered folder for rest
+2017-01-15 23:28:53,152 [Worker-42] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-15 23:28:53,152 [Worker-42] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-01-15 23:28:53,152 [Worker-42] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-15 23:28:53,152 [Worker-42] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\thodoris\Documents\GitHub\rest\workspace\rest\src\test\resources
+2017-01-15 23:28:53,152 [Worker-42] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of rest
+2017-01-15 23:28:53,152 [Worker-42] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for rest
+2017-01-15 23:28:53,168 [Worker-42] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-15 23:56:57,976 [Worker-59] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Cleaning filtered folder for rest
+2017-01-15 23:56:58,192 [Worker-61] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-15 23:56:58,192 [Worker-61] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-01-15 23:56:58,208 [Worker-61] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-15 23:56:58,208 [Worker-61] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\thodoris\Documents\GitHub\rest\workspace\rest\src\test\resources
+2017-01-15 23:56:58,208 [Worker-61] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of rest
+2017-01-15 23:56:58,208 [Worker-61] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for rest
+2017-01-15 23:56:58,208 [Worker-61] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-15 23:57:55,855 [Worker-59] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Cleaning filtered folder for rest
+2017-01-15 23:57:56,033 [Worker-63] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-15 23:57:56,033 [Worker-63] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-01-15 23:57:56,033 [Worker-63] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-15 23:57:56,049 [Worker-63] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\thodoris\Documents\GitHub\rest\workspace\rest\src\test\resources
+2017-01-15 23:57:56,049 [Worker-63] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of rest
+2017-01-15 23:57:56,049 [Worker-63] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for rest
+2017-01-15 23:57:56,056 [Worker-63] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-16 00:15:18,887 [Worker-69] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Cleaning filtered folder for rest
+2017-01-16 00:15:19,072 [Worker-68] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-16 00:15:19,072 [Worker-68] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-01-16 00:15:19,088 [Worker-68] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-16 00:15:19,088 [Worker-68] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\thodoris\Documents\GitHub\rest\workspace\rest\src\test\resources
+2017-01-16 00:15:19,088 [Worker-68] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of rest
+2017-01-16 00:15:19,088 [Worker-68] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for rest
+2017-01-16 00:15:19,088 [Worker-68] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.

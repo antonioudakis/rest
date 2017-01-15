@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import org.ntua.tant.rest.exceptions.DataNotFoundException;
 import org.ntua.tant.rest.model.Message;
 
 public class DB {
@@ -22,9 +23,10 @@ public class DB {
 		public DB(){
 			this.connection = null;
 			connect();
-			setMessages(this.selectMessages(null));
+			//setMessages(this.selectMessages(null));
 		}
 		
+
 		public void connect() {
 			try {
 				if (connection == null) {
@@ -69,6 +71,7 @@ public class DB {
 			        Message messageRec = new Message(id, userid, requestDate,responseCode, responseMessage,message);
 			        messages.add(messageRec);
 			    }
+			    
 			    rs.close();
 			    stmt.close();
 			    disconnect();
@@ -78,6 +81,7 @@ public class DB {
 				return null;
 			}
 		}
+		
 		
 		public String insertMessages(List<Message> messages){
 		    Statement stmt = null;
@@ -143,6 +147,8 @@ public class DB {
 		}
 
 		public List<Message> getMessages() {
+			List<Message> messages = new ArrayList<Message>();
+			messages = selectMessages(null);
 			return messages;
 		}
 
@@ -159,6 +165,11 @@ public class DB {
 		}
 		
 		public List<Message> getMessageWithMessageId(int id){
-			return selectMessages("where \"id\" = "+id);
+			List<Message> messages = new ArrayList<Message>();
+			messages = selectMessages("where \"id\" = "+id);
+			if (messages.size()==0) {
+				throw new DataNotFoundException("Message with id = "+id+" was not found");
+			}
+			return messages;
 		}
 }

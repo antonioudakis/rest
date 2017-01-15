@@ -1,0 +1,2 @@
+0:0:0:0:0:0:0:1 - - [16/Jan/2017:00:15:36 +0200] "POST /rest/webapi/messages HTTP/1.1" 500 5947
+0:0:0:0:0:0:0:1 - - [16/Jan/2017:00:15:43 +0200] "GET /rest/webapi/messages HTTP/1.1" 200 1565
