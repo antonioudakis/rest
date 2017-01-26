@@ -1,0 +1,244 @@
+package org.ntua.tant.rest.DBService;
+
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
+import org.ntua.tant.rest.model.Message;
+import org.ntua.tant.rest.model.Node;
+
+public class DB {
+		private Connection connection;
+		private List<Message> messages = new ArrayList<>();
+		private List<Node> nodes = new ArrayList();
+		private static String ConnectionURL = "jdbc:postgresql://localhost:5432/rest";
+		private static String forNamePath = "org.postgresql.Driver";
+		private static String username = "postgres";
+		private static String password = "tant";
+		
+		public DB(){
+			this.connection = null;
+			connect();
+			setMessages(this.selectMessages(null));
+		}
+		
+		public void connect() {
+			try {
+				if (connection == null) {
+					Class.forName(forNamePath);
+					connection = DriverManager.getConnection(ConnectionURL,username,password);
+				}
+			} catch (Exception e) {
+		        System.out.println(e.getMessage());
+		        connection = null;
+			}
+		}
+		
+		public void disconnect() {
+			
+			try {
+				connection.close();
+				connection = null;
+			} catch (Exception e) {
+		        System.err.println(e.getMessage()); 
+			}
+		}
+		
+		public List<Message> selectMessages(String where){
+		    Statement stmt = null;
+			try {
+				connect();
+				connection.setAutoCommit(false);
+				stmt = connection.createStatement();
+				List<Message> messages = new ArrayList<>();
+				ResultSet rs = null;
+				if (where == null)
+					rs = stmt.executeQuery( "SELECT * FROM \"messages\"" );
+				else
+					rs = stmt.executeQuery( "SELECT * FROM \"messages\" "+ where );
+			    while ( rs.next() ) {
+			       	int id = rs.getInt("id");
+			       	int userid = rs.getInt("userid");
+			       	Date requestDate = rs.getDate("requestDate");
+			       	int responseCode = rs.getInt("responseCode");
+			       	String  responseMessage = rs.getString("responseMessage");
+			        String  message = rs.getString("message");
+			        Message messageRec = new Message(id, userid, requestDate,responseCode, responseMessage,message);
+			        messages.add(messageRec);
+			    }
+			    rs.close();
+			    stmt.close();
+			    disconnect();
+			    return messages;
+			} catch ( Exception e ) {
+				System.err.println( e.getMessage() );
+				return null;
+			}
+		}
+		
+		public List<Node> selectNodes(String where){
+		    Statement stmt = null;
+			try {
+				connect();
+				connection.setAutoCommit(false);
+				stmt = connection.createStatement();
+				List<Node> messages = new ArrayList<>();
+				ResultSet rs = null;
+				if (where == null)
+					rs = stmt.executeQuery( "SELECT * FROM \"rest.node\"" );
+				else
+					rs = stmt.executeQuery( "SELECT * FROM \"rest.node\" "+ where );
+			    while ( rs.next() ) {
+			       	int id = rs.getInt("id");
+			       	int gis_id = rs.getInt("gis_id");
+			       	String  owner = rs.getString("owner");
+			       	String  type = rs.getString("type");
+			       	String  material = rs.getString("material");
+			       	String  technology = rs.getString("technology");
+			       	String  speed = rs.getString("speed");
+			       	Date installDate = rs.getDate("installdate");
+			       	String  comment = rs.getString("comment");
+			        Node nodeRec = new Node(id, gis_id, owner,type, material,technology,speed,installDate,comment);
+			        nodes.add(nodeRec);
+			        nodeRec.printNode();
+			    }
+			    rs.close();
+			    stmt.close();
+			    disconnect();
+			    return nodes;
+			} catch ( Exception e ) {
+				System.err.println( e.getMessage() );
+				return null;
+			}
+		}
+		
+		public String insertMessages(List<Message> messages){
+		    Statement stmt = null;
+		    String responseMsg = "";
+			try {
+				connect();
+				connection.setAutoCommit(false);
+				int i = 0;
+				int id = 0;
+				for(Message message : messages){
+					stmt = connection.createStatement();
+					//stmt.executeUpdate("INSERT INTO \"messages\" "+message.getMessageVariables()+" values "+message.getMessageValues()+" ;");
+					stmt.execute("INSERT INTO \"messages\" "+message.getMessageVariables()+" values "+message.getMessageValues()+" returning id;");
+					ResultSet rs = stmt.getResultSet();
+					if (rs.next()) {
+						id = rs.getInt("id");
+						responseMsg += "ROW WITH ID = "+id+" INSERTED\n";
+					}
+					stmt.close();
+					connection.commit();
+					i++;
+				}
+				disconnect();
+				responseMsg += "\n"+i+" ROWS INSERTED\n";
+			    return responseMsg;
+			} catch ( Exception e ) {
+				System.out.println(messages.toString());
+				System.err.println( e.getMessage() );
+				return "0 ROWS INSERTED";
+			}
+		}
+		
+		
+		public String insertMessage(Message message){
+		    Statement stmt = null;
+			try {
+				connect();
+				connection.setAutoCommit(false);
+				stmt = connection.createStatement();
+				stmt.executeUpdate("INSERT INTO \"messages\" "+message.getMessageVariables()+" values "+message.getMessageValues()+";");
+				stmt.close();
+				connection.commit();
+				disconnect();
+			    return "1 ROW INSERTED";
+			} catch ( Exception e ) {
+				System.err.println( e.getMessage() );
+				return "Failed to insert";
+			}
+		}
+		
+		public String deleteMessage(int id){
+		    Statement stmt = null;
+			try {
+				connect();
+				connection.setAutoCommit(false);
+				stmt = connection.createStatement();
+				stmt.executeUpdate("DELETE FROM \"messages\" WHERE id = "+id+";");
+				stmt.close();
+				connection.commit();
+				disconnect();
+			    return "1 ROW DELETED";
+			} catch ( Exception e ) {
+				System.err.println( e.getMessage() );
+				return "Failed to Delete";
+			}
+		}
+		
+		public String updateMessage(int id, Message message){
+			List<Message> msg = getMessageWithMessageId(id);
+			if (msg.isEmpty())
+				return "FAILED TO UPDATE ROW WITH ID = "+id+". THERE IS NO MESSAGE WITH THIS ID";
+		    Statement stmt = null;
+		    DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
+			try {
+				connect();
+				connection.setAutoCommit(false);
+				stmt = connection.createStatement();
+				stmt.executeUpdate("UPDATE \"messages\" set userid = "+message.getUserid()+", \"requestDate\" = '"+df.format(message.getRequestDate())+"', \"responseCode\" = "+message.getResponseCode()+", \"responseMessage\" = '"+message.getResponseMessage()+"', message = '"+message.getMessage()+"' WHERE id = "+id+";");
+				stmt.close();
+				connection.commit();
+				disconnect();
+			    return "ROW WITH ID = "+id+" UPDATED";
+			} catch ( Exception e ) {
+				System.err.println( e.getMessage() );
+				return "FAILED TO UPDATE ROW WITH ID = "+id;
+			}
+		}
+		
+		public Connection getConnection() {
+			return this.connection;
+		}
+		
+		public void setConnection(Connection connection) {
+			this.connection = connection;
+		}
+
+		public List<Message> getMessages() {
+			return messages;
+		}
+		
+		public List<Node> getNodes() {
+			return nodes;
+		}
+
+		public void setMessages(List<Message> messages) {
+			this.messages = messages;
+		}
+		
+		public List<Message> getMessagesForYear(int year){
+			return selectMessages("where extract(year from \"requestDate\") = "+year);
+		}
+		
+		public List<Message> getMessagesForResponseCode(int code){
+			return selectMessages("where \"responseCode\" = "+code);
+		}
+		
+		public List<Message> getMessageWithMessageId(int id){
+			return selectMessages("where \"id\" = "+id);
+		}
+		
+		public List<Node> getNodeWithNodeId(int id){
+			return selectNodes("where \"id\" = "+id);
+		}
+}

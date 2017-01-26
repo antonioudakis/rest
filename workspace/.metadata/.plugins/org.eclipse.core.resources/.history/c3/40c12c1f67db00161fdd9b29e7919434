@@ -1,5 +1,0 @@
-package org.ntua.tant.rest.exceptions;
-
-public class BadRequestMapper {
-
-}

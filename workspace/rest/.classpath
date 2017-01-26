@@ -28,6 +28,7 @@
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/thodoris/workspace/postgresql-9.4.1212.jre6.jar"/>
+	<classpathentry kind="lib" path="C:/Users/thodoris/Documents/GitHub/rest/workspace/ExternalLibraries/postgresql-9.4.1212.jre6.jar"/>
+	<classpathentry kind="lib" path="C:/Users/thodoris/Documents/GitHub/rest/workspace/ExternalLibraries/javax.servlet.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

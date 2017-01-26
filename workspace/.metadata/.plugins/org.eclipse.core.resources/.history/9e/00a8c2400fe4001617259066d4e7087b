@@ -1,0 +1,90 @@
+package org.ntua.tant.rest.resources;
+
+import java.util.List;
+import javax.ws.rs.Consumes;
+import javax.ws.rs.DELETE;
+import javax.ws.rs.GET;
+import javax.ws.rs.POST;
+import javax.ws.rs.PUT;
+import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
+import javax.ws.rs.Produces;
+import javax.ws.rs.QueryParam;
+import javax.ws.rs.core.Context;
+import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Request;
+import javax.ws.rs.core.Response;
+import javax.ws.rs.core.Response.Status;
+
+import org.ntua.tant.rest.DBService.*;
+import org.ntua.tant.rest.exceptions.DataNotFoundException;
+import org.ntua.tant.rest.exceptions.GenericException;
+import org.ntua.tant.rest.model.*;
+
+@Path("/nodes")
+@Consumes(MediaType.APPLICATION_XML)
+@Produces(MediaType.APPLICATION_XML)
+public class NodeResource {
+	
+	DB db = new DB();
+	
+	@GET
+	public List<Node> getMessages(@QueryParam("year") int year,
+			                         @Context Request request ){
+		
+		
+		
+		if(year > 0) {
+			return null;//db.getNodesForYear(year);
+		}
+		
+		return db.getNodes();
+	}
+	
+	@POST
+	public Response addNode(Node node){
+		String message = db.insertNode(node);
+		if (message.equalsIgnoreCase("FAILED TO INSERT")) {
+			throw new GenericException(message);
+		} else {
+			ResponseMessage responseMessage = new ResponseMessage(Status.OK.getStatusCode(),message);
+			return Response.status(Status.OK).entity(responseMessage).build(); 
+		}
+	}
+	
+	@PUT
+	@Path("/{nodeId}")
+	public Response updateNode(@PathParam("nodeId") int id, Node node){
+		System.out.println("i am here");
+		String message = db.updateNode(id, node);
+		if (message.substring(0, 6).equalsIgnoreCase("FAILED")){
+			throw new GenericException(message);
+		} else {
+			ResponseMessage responseMessage = new ResponseMessage(Status.OK.getStatusCode(),message);
+			return Response.status(Status.OK).entity(responseMessage).build(); 
+		}
+	}
+	
+	@DELETE
+	@Path("/{nodeId}")
+	public Response deleteNode(@PathParam("nodeId") int id){
+		String message = db.deleteNode(id);
+		if (message.equalsIgnoreCase("1 ROW DELETED")) {
+			ResponseMessage responseMessage = new ResponseMessage(Status.OK.getStatusCode(),message);
+			return Response.status(Status.OK).entity(responseMessage).build(); 
+		} else {
+			throw new GenericException(message);
+		}
+	}
+	
+	@GET
+	@Path("/{nodeId}")
+	public List <Node> getNode(@PathParam("nodeId") int Id) {
+		System.out.println("i am here");
+		if (db.getNodeWithNodeId(Id).size()==0) {
+			throw new DataNotFoundException("NOT FOUND");
+		}
+		return db.getNodeWithNodeId(Id);
+	}
+
+}

@@ -1,0 +1,48 @@
+package org.ntua.tant.rest.filters;
+
+import java.io.IOException;
+import java.util.List;
+import java.util.StringTokenizer;
+import javax.ws.rs.container.ContainerRequestContext;
+import javax.ws.rs.container.ContainerRequestFilter;
+import javax.ws.rs.core.Response;
+import javax.ws.rs.ext.Provider;
+
+import org.glassfish.jersey.internal.util.Base64;
+
+@Provider
+public class SecurityFilter implements ContainerRequestFilter{
+	
+	private static final String AUTHORIZATION_HEADER_KEY = "Authorization";
+	private static final String AUTHORIZATION_HEADER_PREFIX = "Basic ";
+	private static final String SECURED_URL_PREFIX = "rest";
+	private static final String USERNAME = "user";
+	private static final String PASSWORD = "password";
+	
+	@Override
+	public void filter(ContainerRequestContext requestContext) throws IOException{
+		System.out.println("i am in the filter");
+		System.out.println(requestContext.getUriInfo().toString());
+		if(requestContext.getUriInfo().getPath().contains(SECURED_URL_PREFIX)) {
+			System.out.println("i have the prefix rest");
+			List<String> authHeader = requestContext.getHeaders().get(AUTHORIZATION_HEADER_KEY);
+			if(authHeader != null && authHeader.size() > 0){
+				String authToken = authHeader.get(0);
+				authToken = authToken.replaceFirst(AUTHORIZATION_HEADER_PREFIX, "");
+				String decodedString = Base64.decodeAsString(authToken);
+				StringTokenizer tokenizer = new StringTokenizer(decodedString, ":");
+				String username = tokenizer.nextToken();
+				String password = tokenizer.nextToken();
+				System.out.println(username+" "+password);
+				if (username.equals(USERNAME) && password.equals(PASSWORD)){
+					return;
+				}
+			}
+			Response unauthorizedStatus = Response
+				                        	.status(Response.Status.UNAUTHORIZED)
+				                        	.entity("User cannot access the resource.")
+				                        	.build();
+			requestContext.abortWith(unauthorizedStatus);
+		}
+	}
+}

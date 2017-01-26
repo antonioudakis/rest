@@ -19,8 +19,6 @@
 <fullyQualifiedTypeName name="javax.ws.rs.container.ContainerRequestContext"/>
 <fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="java.util.StringTokenizer"/>
-<fullyQualifiedTypeName name="javax.ws.rs.core.Response"/>
-<fullyQualifiedTypeName name="javax.ws.rs.core.Response.StatusType"/>
 <fullyQualifiedTypeName name="java.net.HttpURLConnection"/>
 <fullyQualifiedTypeName name="java.net.URL"/>
 <fullyQualifiedTypeName name="org.glassfish.jersey.internal.util.Base64"/>
@@ -42,12 +40,18 @@
 <fullyQualifiedTypeName name="java.sql.ResultSet"/>
 <fullyQualifiedTypeName name="java.util.Date"/>
 <fullyQualifiedTypeName name="org.ntua.tant.messenger.model.DB"/>
-<fullyQualifiedTypeName name="org.ntua.tant.rest.DBService.DB"/>
-<fullyQualifiedTypeName name="java.lang.System"/>
 <fullyQualifiedTypeName name="org.ntua.tant.rest.exceptions.DataNotFoundException"/>
 <fullyQualifiedTypeName name="javax.xml.bind.annotation.XmlRootElement"/>
-<fullyQualifiedTypeName name="javax.ws.rs.core.Response.Status"/>
 <fullyQualifiedTypeName name="org.ntua.tant.rest.model.ErrorMessage"/>
 <fullyQualifiedTypeName name="javax.ws.rs.ext.ExceptionMapper"/>
 <fullyQualifiedTypeName name="javax.ws.rs.ext.Provider"/>
+<fullyQualifiedTypeName name="javax.ws.rs.core.Response.StatusType"/>
+<fullyQualifiedTypeName name="javax.ws.rs.core.Response"/>
+<fullyQualifiedTypeName name="javax.ws.rs.core.Response.Status"/>
+<fullyQualifiedTypeName name="javax.ws.rs.core.Context"/>
+<fullyQualifiedTypeName name="javax.ws.rs.core.Request"/>
+<fullyQualifiedTypeName name="org.ntua.tant.rest.exceptions.UnauthorizedException"/>
+<fullyQualifiedTypeName name="org.ntua.tant.rest.DBService.DB"/>
+<fullyQualifiedTypeName name="org.ntua.tant.rest.model.User"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
 </qualifiedTypeNameHistroy>

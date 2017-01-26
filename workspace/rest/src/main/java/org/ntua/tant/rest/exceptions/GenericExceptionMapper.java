@@ -11,9 +11,21 @@ public class GenericExceptionMapper implements ExceptionMapper<Throwable>{
 
 	@Override
 	public Response toResponse(Throwable ex) {
-
-		ErrorMessage errorMessage = new ErrorMessage(500,ex.getMessage());
-		return Response.status(Status.INTERNAL_SERVER_ERROR).entity(errorMessage).build();
+        String ErrorDescr = ex.getMessage();
+        if (ErrorDescr.equals("HTTP 404 Not Found")){
+        	ErrorMessage errorMessage = new ErrorMessage(Status.NOT_FOUND.getStatusCode(),"Not Found");
+        	return Response.status(Status.NOT_FOUND).entity(errorMessage).build();
+        } else if (ErrorDescr.equals("HTTP 400 Bad Request")) {
+        	ErrorMessage errorMessage = new ErrorMessage(Status.BAD_REQUEST.getStatusCode(),"Bad Request");
+        	return Response.status(Status.BAD_REQUEST).entity(errorMessage).build();
+        } else if (ErrorDescr.equals("HTTP 405 Method Not Allowed")) {
+        	ErrorMessage errorMessage = new ErrorMessage(Status.METHOD_NOT_ALLOWED.getStatusCode(),"Method Not Allowed");
+        	return Response.status(Status.METHOD_NOT_ALLOWED).entity(errorMessage).build();
+        } else {
+        	ErrorMessage errorMessage = new ErrorMessage(Status.INTERNAL_SERVER_ERROR.getStatusCode(),ex.getMessage());
+        	return Response.status(Status.INTERNAL_SERVER_ERROR).entity(errorMessage).build();
+        }
+		
 	}
 
 }

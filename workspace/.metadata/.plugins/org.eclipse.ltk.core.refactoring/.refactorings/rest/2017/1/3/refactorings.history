@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;org.ntua.tant.rest.exceptions.UnathorizedExceptionMapper.java&apos; to &apos;UnauthorizedExceptionMapper.java&apos;&#x0D;&#x0A;- Original project: &apos;rest&apos;&#x0D;&#x0A;- Original element: &apos;org.ntua.tant.rest.exceptions.UnathorizedExceptionMapper.java&apos;&#x0D;&#x0A;- Renamed element: &apos;org.ntua.tant.rest.exceptions.UnauthorizedExceptionMapper.java&apos;" description="Rename compilation unit &apos;UnathorizedExceptionMapper.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src\/main\/java&lt;org.ntua.tant.rest.exceptions{UnathorizedExceptionMapper.java" name="UnauthorizedExceptionMapper.java" references="false" stamp="1485066633950" version="1.0"/>
+</session>

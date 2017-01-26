@@ -16,7 +16,6 @@ public class restclient {
     private String password;
     private String url;
     private static final String Coding = "UTF-8";
-	//private static final String URLdefault = "http://147.102.213.13:8888/rest/webapi/messages";
 	private static final String ErrorInParameters = "Name: restclient\n\nDescription: Calls a ReST Service\n\nThe following parameters are needed:\n\n-m   ReST Method to call. The implemented methods are GET, POST, PUT and DELETE.\n-f   Input XML file for POST and PUT methods. For GET method output file is optional.\n     When a file is not defined in GET method the responded XML file is printed on the screen.\n     For Delete method file is not needed.\n-URL Service URL\n\nThe following parameters are optional and they are needed only if ReST service requires Basic Authentication:\n\n-u Username\n-p Password\n";
 	
 

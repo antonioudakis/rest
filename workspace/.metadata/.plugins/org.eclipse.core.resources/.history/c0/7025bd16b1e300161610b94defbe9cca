@@ -1,0 +1,5 @@
+package org.ntua.tant.rest.resources;
+
+public class NodeResource {
+
+}

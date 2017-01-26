@@ -1,0 +1,219 @@
+package org.ntua.tant.rest.DBService;
+
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
+import org.ntua.tant.rest.model.Message;
+import org.ntua.tant.rest.model.Node;
+
+public class DB {
+		private Connection connection;
+		private List<Node> nodes = new ArrayList<>();
+		private static String ConnectionURL = "jdbc:postgresql://localhost:5432/network_infrastructure";
+		private static String forNamePath = "org.postgresql.Driver";
+		private static String username = "postgres";
+		private static String password = "tant";
+		
+		public DB(){
+			this.connection = null;
+			connect();
+			setNodes(this.selectNodes(null));
+		}
+		
+		public void connect() {
+			try {
+				if (connection == null) {
+					Class.forName(forNamePath);
+					connection = DriverManager.getConnection(ConnectionURL,username,password);
+				}
+			} catch (Exception e) {
+		        System.out.println(e.getMessage());
+		        connection = null;
+			}
+		}
+		
+		public void disconnect() {
+			
+			try {
+				connection.close();
+				connection = null;
+			} catch (Exception e) {
+		        System.err.println(e.getMessage()); 
+			}
+		}
+		
+		public List<Node> selectNodes(String where){
+		    Statement stmt = null;
+			try {
+				connect();
+				connection.setAutoCommit(false);
+				stmt = connection.createStatement();
+				List<Node> nodes = new ArrayList<>();
+				ResultSet rs = null;
+				if (where == null)
+					rs = stmt.executeQuery( "SELECT * FROM rest.node" );
+				else
+					rs = stmt.executeQuery( "SELECT * FROM rest.node "+ where );
+			    while ( rs.next() ) {
+			       	int id = rs.getInt("id");
+			       	int gis_id = rs.getInt("gis_id");
+			       	String  owner = rs.getString("owner");
+			       	String  type = rs.getString("type");
+			       	String  material = rs.getString("material");
+			       	String  technology = rs.getString("technology");
+			       	String  speed = rs.getString("speed");
+			       	Date installDate = rs.getDate("installdate");
+			       	String  comment = rs.getString("comment");
+			        Node nodeRec = new Node(id, gis_id, owner,type, material,technology,speed,installDate,comment);
+			        nodes.add(nodeRec);
+			    }
+			    rs.close();
+			    stmt.close();
+			    disconnect();
+			    return nodes;
+			} catch ( Exception e ) {
+				System.err.println( e.getMessage() );
+				return null;
+			}
+		}
+		
+				
+		public String insertMessages(List<Message> messages){
+		    Statement stmt = null;
+		    String responseMsg = "";
+			try {
+				connect();
+				connection.setAutoCommit(false);
+				int i = 0;
+				int id = 0;
+				for(Message message : messages){
+					stmt = connection.createStatement();
+					//stmt.executeUpdate("INSERT INTO \"messages\" "+message.getMessageVariables()+" values "+message.getMessageValues()+" ;");
+					stmt.execute("INSERT INTO \"messages\" "+message.getMessageVariables()+" values "+message.getMessageValues()+" returning id;");
+					ResultSet rs = stmt.getResultSet();
+					if (rs.next()) {
+						id = rs.getInt("id");
+						responseMsg += "ROW WITH ID = "+id+" INSERTED\n";
+					}
+					stmt.close();
+					connection.commit();
+					i++;
+				}
+				disconnect();
+				responseMsg += "\n"+i+" ROWS INSERTED\n";
+			    return responseMsg;
+			} catch ( Exception e ) {
+				System.out.println(messages.toString());
+				System.err.println( e.getMessage() );
+				return "0 ROWS INSERTED";
+			}
+		}
+		
+		
+		public String insertNode(Node node){
+		    Statement stmt = null;
+			try {
+				
+				connect();
+				connection.setAutoCommit(false);
+				stmt = connection.createStatement();
+				stmt.executeUpdate("INSERT INTO rest.node "+node.getNodeVariables()+" values "+node.getNodeValues()+";");
+				
+				stmt.close();
+				connection.commit();
+				disconnect();
+			    return "1 ROW INSERTED";
+			} catch ( Exception e ) {
+				System.err.println( e.getMessage() );
+				return "FAILED TO INSERT";
+			}
+		}
+		
+				
+		public String deleteNode(int id){
+			if (getNodeWithNodeId(id).size()==0)
+				return "FAILED TO DELETE. RECORD DOES NOT EXIST";
+		    Statement stmt = null;
+			try {
+				connect();
+				connection.setAutoCommit(false);
+				stmt = connection.createStatement();
+				stmt.executeUpdate("DELETE FROM rest.node WHERE id = "+id+";");
+				stmt.close();
+				connection.commit();
+				disconnect();
+			    return "1 ROW DELETED";
+			} catch ( Exception e ) {
+				System.err.println( e.getMessage() );
+				return "FAILED TO DELETE";
+			}
+		}
+		
+				
+		public String updateNode(int id, Node node){
+			List<Node> oldNode = getNodeWithNodeId(id);
+			if (oldNode.isEmpty())
+				return "FAILED TO UPDATE ROW WITH ID = "+id+". THERE IS NO NODE WITH THIS ID";
+		    Statement stmt = null;
+		    DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
+			try {
+				connect();
+				connection.setAutoCommit(false);
+				stmt = connection.createStatement();
+				String strSQL = "UPDATE rest.node set gis_id="+node.getGis_id();
+				if (node.getOwner()!=null)
+					strSQL+=",owner='"+node.getOwner()+"'";
+				if (node.getType()!=null)
+					strSQL+=",type='"+node.getType()+"'";
+				if (node.getMaterial()!=null)
+					strSQL+=",material='"+node.getMaterial()+"'";
+				if (node.getTechnology()!=null)
+					strSQL+=",technology='"+node.getTechnology()+"'";
+				if (node.getSpeed()!=null)
+					strSQL+=",speed='"+node.getSpeed()+"'";
+				if (node.getInstallDate()!=null)
+					strSQL+=",installdate='"+df.format(node.getInstallDate())+"'";
+				strSQL+=" where id="+id;
+				stmt.executeUpdate(strSQL);
+				stmt.close();
+				connection.commit();
+				disconnect();
+			    return "ROW WITH ID = "+id+" UPDATED";
+			} catch ( Exception e ) {
+				System.err.println( e.getMessage() );
+				return "FAILED TO UPDATE ROW WITH ID = "+id;
+			}
+		}
+		
+		public Connection getConnection() {
+			return this.connection;
+		}
+		
+		public void setConnection(Connection connection) {
+			this.connection = connection;
+		}
+
+		public List<Node> getNodes() {
+			return nodes;
+		}
+		
+		public void setNodes(List<Node> nodes) {
+			this.nodes = nodes;
+		}
+		
+		public List<Node> getNodesForYear(int year){
+			return selectNodes("where extract(year from \"installdate\") = "+year);
+		}
+		
+		public List<Node> getNodeWithNodeId(int id){
+			return selectNodes("where \"id\" = "+id);
+		}
+}
